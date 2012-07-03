@@ -75,6 +75,9 @@ syn region mkdBlockquote start=/^\s*>/              end=/$/                 cont
 syn region mkdCode      start="<pre[^>]*>"         end="</pre>"
 syn region mkdCode      start="<code[^>]*>"        end="</code>"
 
+"Leanpub part header
+syn region lpPartHeader   start="^-#\s."              end="/$/" contains=@Spell
+
 "HTML headings
 syn region htmlH1       start="^\s*#"                   end="\($\|#\+\)" contains=@Spell
 syn region htmlH2       start="^\s*##"                  end="\($\|#\+\)" contains=@Spell
@@ -121,6 +124,7 @@ HtmlHiLink mkdID            Identifier
 HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
+HtmlHiLink lpPartHeader     htmlH1
 
 HtmlHiLink mkdDelimiter     Delimiter
 
