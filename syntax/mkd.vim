@@ -68,12 +68,13 @@ syn match  mkdListItem  "^\s*[-*+]\s\+"
 syn match  mkdListItem  "^\s*\d\+\.\s\+"
 syn match  mkdCode      /^\s*\n\(\(\s\{4,}[^ ]\|\t\+[^\t]\).*\n\)\+/
 syn match  mkdLineBreak /  \+$/
-syn region mkdCode      start=/\\\@<!`/                   end=/\\\@<!`/
-syn region mkdCode      start=/\s*``[^`]*/          end=/[^`]*``\s*/
-syn region mkdCode      start=/^```\w*\s*$/          end=/^```\s*$/
-syn region mkdBlockquote start=/^\s*>/              end=/$/                 contains=mkdLineBreak,mkdLineContinue,@Spell
+syn region mkdCode      start=/\\\@<!`/            end=/\\\@<!`/
+syn region mkdCode      start=/\s*``[^`]*/         end=/[^`]*``\s*/
+syn region mkdCode      start=/^```\w*\s*$/        end=/^```\s*$/
+syn region mkdBlockquote start=/^\s*>/             end=/$/                 contains=mkdLineBreak,mkdLineContinue,@Spell
 syn region mkdCode      start="<pre[^>]*>"         end="</pre>"
 syn region mkdCode      start="<code[^>]*>"        end="</code>"
+syn region mkdBold      start=/\*\*/               end=/\*\*/
 
 "Leanpub Markdown extensions
 syn region lpPartHeader   start="^-#\s."              end="/$/" contains=@Spell
@@ -124,6 +125,7 @@ HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
 HtmlHiLink mkdDelimiter     Delimiter
+HtmlHiLink mkdBold          Identifier
 
 "highlighting for Leanpub Markdown extensions
 HtmlHiLink lpPartHeader     htmlH1
