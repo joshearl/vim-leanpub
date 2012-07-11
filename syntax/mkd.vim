@@ -75,8 +75,11 @@ syn region mkdBlockquote start=/^\s*>/              end=/$/                 cont
 syn region mkdCode      start="<pre[^>]*>"         end="</pre>"
 syn region mkdCode      start="<code[^>]*>"        end="</code>"
 
-"Leanpub part header
+"Leanpub Markdown extensions
 syn region lpPartHeader   start="^-#\s."              end="/$/" contains=@Spell
+syn region lpComment      start="%%\s.*"              end="/$/" contains=@Spell
+syn region lpTip          start="^T>\s.*"             end="/$/" contains=@Spell
+syn region lpInfo          start="^T>\s.*"            end="/$/" contains=@Spell
 
 "HTML headings
 syn region htmlH1       start="^\s*#"                   end="\($\|#\+\)" contains=@Spell
@@ -87,8 +90,6 @@ syn region htmlH5       start="^\s*#####"               end="\($\|#\+\)" contain
 syn region htmlH6       start="^\s*######"              end="\($\|#\+\)" contains=@Spell
 syn match  htmlH1       /^.\+\n=\+$/ contains=@Spell
 syn match  htmlH2       /^.\+\n-\+$/ contains=@Spell
-
-
 
 " fold region for headings
 syn region mkdHeaderFold
@@ -107,10 +108,8 @@ syn region mkdListFold
 syn sync fromstart
 setlocal foldmethod=syntax
 
-
-
 "highlighting for Markdown groups
-HtmlHiLink mkdString	    String
+HtmlHiLink mkdString	      String
 HtmlHiLink mkdCode          String
 HtmlHiLink mkdBlockquote    Comment
 HtmlHiLink mkdLineContinue  Comment
@@ -124,9 +123,14 @@ HtmlHiLink mkdID            Identifier
 HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
-HtmlHiLink lpPartHeader     htmlH1
-
 HtmlHiLink mkdDelimiter     Delimiter
+
+"highlighting for Leanpub Markdown extensions
+HtmlHiLink lpPartHeader     htmlH1
+HtmlHiLink lpComment        Todo
+HtmlHiLink lpTip            Identifier
+HtmlHiLink lpInfo           Identifier
+
 
 let b:current_syntax = "mkd"
 
