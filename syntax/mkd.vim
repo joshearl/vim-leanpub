@@ -77,10 +77,10 @@ syn region mkdCode      start="<code[^>]*>"        end="</code>"
 syn region mkdBold      start=/\*\*/               end=/\*\*/
 
 "Leanpub Markdown extensions
-syn region lpPartHeader   start="^-#\s.*"              end="/$/" contains=@Spell
-syn region lpComment      start="^%%\s.*"              end="/$/" contains=@Spell
-syn region lpTip          start="^T>\s.*"             end="/$/" contains=@Spell
-syn region lpInfo          start="^T>\s.*"            end="/$/" contains=@Spell
+syn region lpPartHeader   start="^-#\s.*"              end="$" contains=@Spell
+syn region lpComment      start="^%%\s.*"              end="$" contains=@Spell
+syn region lpTip          start="^T>\s.*"             end="$" contains=@Spell
+syn region lpInfo          start="^T>\s.*"            end="$" contains=@Spell
 
 "HTML headings
 syn region htmlH1       start="^\s*#"                   end="\($\|#\+\)" contains=@Spell
