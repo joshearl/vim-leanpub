@@ -125,13 +125,13 @@ HtmlHiLink mkdLinkDef       mkdID
 HtmlHiLink mkdLinkDefTarget mkdURL
 HtmlHiLink mkdLinkTitle     htmlString
 HtmlHiLink mkdDelimiter     Delimiter
-HtmlHiLink mkdBold          Identifier
+HtmlHiLink mkdBold          Label
 
 "highlighting for Leanpub Markdown extensions
-HtmlHiLink lpPartHeader     htmlH1
+HtmlHiLink lpPartHeader     Title
 HtmlHiLink lpComment        Todo
-HtmlHiLink lpTip            Identifier
-HtmlHiLink lpInfo           Identifier
+HtmlHiLink lpTip            PreProc
+HtmlHiLink lpInfo           PreProc
 
 
 let b:current_syntax = "mkd"
