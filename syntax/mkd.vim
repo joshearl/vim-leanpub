@@ -116,7 +116,7 @@ HtmlHiLink mkdBlockquote    Comment
 HtmlHiLink mkdLineContinue  Comment
 HtmlHiLink mkdListItem      Identifier
 HtmlHiLink mkdRule          Identifier
-HtmlHiLink mkdLineBreak     Todo
+HtmlHiLink mkdLineBreak     Underlined
 HtmlHiLink mkdLink          htmlLink
 HtmlHiLink mkdURL           htmlString
 HtmlHiLink mkdInlineURL     htmlLink
