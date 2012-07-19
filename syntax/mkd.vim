@@ -133,6 +133,9 @@ HtmlHiLink lpComment        Todo
 HtmlHiLink lpTip            PreProc
 HtmlHiLink lpInfo           PreProc
 
+highlight mkdBold gui=bold
+
+
 
 let b:current_syntax = "mkd"
 
