@@ -133,7 +133,7 @@ HtmlHiLink lpComment        Todo
 HtmlHiLink lpTip            PreProc
 HtmlHiLink lpInfo           PreProc
 
-highlight mkdBold gui=bold
+"highlight mkdBold gui=bold
 
 
 
