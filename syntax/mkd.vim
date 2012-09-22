@@ -80,7 +80,8 @@ syn region mkdBold      start=/\*\*/               end=/\*\*/
 syn region lpPartHeader   start="^-#\s.*"              end="$" contains=@Spell
 syn region lpComment      start="^%%\s.*"              end="$" contains=@Spell
 syn region lpTip          start="^T>\s.*"             end="$" contains=@Spell
-syn region lpInfo          start="^T>\s.*"            end="$" contains=@Spell
+syn region lpInfo          start="^I>\s.*"            end="$" contains=@Spell
+syn region lpWarn          start="^W>\s.*"            end="$" contains=@Spell
 
 "HTML headings
 syn region htmlH1       start="^\s*#"                   end="\($\|#\+\)" contains=@Spell
@@ -132,6 +133,7 @@ HtmlHiLink lpPartHeader     Title
 HtmlHiLink lpComment        Todo
 HtmlHiLink lpTip            PreProc
 HtmlHiLink lpInfo           PreProc
+HtmlHiLink lpWarn           PreProc
 
 "highlight mkdBold gui=bold
 
